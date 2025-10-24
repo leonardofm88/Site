@@ -3,34 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Site de Teste</title>
+  <title>Site de Teste - Leonardo Martins</title>
   <style>
+    /* ======== Estilos gerais ======== */
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      text-align: center;
-      padding-top: 100px;
-    }
-    h1 {
-      color: #2b6cb0;
-    }
-    p {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f7fa;
       color: #333;
-      font-size: 18px;
     }
-    .box {
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ======== Cabeçalho ======== */
+    header {
+      background-color: #2b6cb0;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffdf6c;
+    }
+
+    /* ======== Sessões ======== */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #inicio {
+      background: linear-gradient(135deg, #2b6cb0, #63b3ed);
+      color: white;
+      padding: 100px 20px;
+    }
+
+    #inicio h1 {
+      font-size: 2.5em;
+    }
+
+    #inicio p {
+      font-size: 1.2em;
+    }
+
+    #sobre {
+      background-color: white;
+    }
+
+    #contato {
+      background-color: #edf2f7;
+    }
+
+    /* ======== Cards ======== */
+    .card {
       background-color: white;
       display: inline-block;
-      padding: 40px 60px;
-      border-radius: 12px;
+      width: 300px;
+      margin: 15px;
+      padding: 25px;
+      border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .card h3 {
+      color: #2b6cb0;
+    }
+
+    /* ======== Rodapé ======== */
+    footer {
+      background-color: #2b6cb0;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>🚀 Site publicado com sucesso!</h1>
-    <p>Se você está vendo esta página, o GitHub Pages está funcionando 🎉</p>
-  </div>
+  <!-- ======== Cabeçalho ======== -->
+  <header>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- ======== Início ======== -->
+  <section id="inicio">
+    <h1>Bem-vindo ao meu site 👋</h1>
+    <p>Este é um exemplo de site hospedado gratuitamente no GitHub Pages.</p>
+  </section>
+
+  <!-- ======== Sobre ======== -->
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>Meu nome é <strong>Leonardo Martins</strong>. Gosto de tecnologia, dados e aprender coisas novas todos os dias.</p>
+
+    <div class="card">
+      <h3>💻 Desenvolvimento</h3>
+      <p>Criação de sites simples, painéis e automações usando HTML, SQL e ferramentas online.</p>
+    </div>
+
+    <div class="card">
+      <h3>📊 Dados</h3>
+      <p>Trabalho com análise de desempenho, dashboards e relatórios em ferramentas como o Looker Studio.</p>
+    </div>
+
+    <div class="card">
+      <h3>📚 Educação</h3>
+      <p>Experiência com acompanhamento de alunos, avaliações e desempenho acadêmico.</p>
+    </div>
+  </section>
+
+  <!-- ======== Contato ======== -->
+  <section id="contato">
+    <h2>Entre em contato</h2>
+    <p>Você pode me encontrar em:</p>
+    <p>
+      📧 <a href="mailto:leonardo@email.com">leonardo@email.com</a><br>
+      💼 <a href="https://www.linkedin.com" target="_blank">LinkedIn</a><br>
+      🌍 <a href="https://github.com" target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <!-- ======== Rodapé ======== -->
+  <footer>
+    <p>© 2025 Leonardo Martins — Site de teste hospedado no GitHub Pages</p>
+  </footer>
 </body>
 </html>
