@@ -1,152 +1,255 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site de Teste - Leonardo Martins</title>
-  <style>
-    /* ======== Estilos gerais ======== */
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f7fa;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador e Quiz - Impacto Digital na Saúde Mental</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    /* ======== Cabeçalho ======== */
-    header {
-      background-color: #2b6cb0;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+        header img {
+            height: 60px;
+        }
 
-    nav a {
-      margin: 0 15px;
-      color: white;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
+        header .title {
+            flex: 1;
+            text-align: center;
+        }
 
-    nav a:hover {
-      color: #ffdf6c;
-    }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    /* ======== Sessões ======== */
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px 0;
+        }
 
-    #inicio {
-      background: linear-gradient(135deg, #2b6cb0, #63b3ed);
-      color: white;
-      padding: 100px 20px;
-    }
+        input[type="number"], button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
 
-    #inicio h1 {
-      font-size: 2.5em;
-    }
+        button {
+            background-color: #0077cc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-    #inicio p {
-      font-size: 1.2em;
-    }
+        button:hover {
+            background-color: #005fa3;
+        }
 
-    #sobre {
-      background-color: white;
-    }
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            color: #f44336;
+        }
 
-    #contato {
-      background-color: #edf2f7;
-    }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #222;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
 
-    /* ======== Cards ======== */
-    .card {
-      background-color: white;
-      display: inline-block;
-      width: 300px;
-      margin: 15px;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: left;
-    }
+        .marca {
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
 
-    .card h3 {
-      color: #2b6cb0;
-    }
+        .quiz {
+            margin-top: 30px;
+        }
 
-    /* ======== Rodapé ======== */
-    footer {
-      background-color: #2b6cb0;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-  </style>
+        .quiz h2 {
+            color: #0077cc;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .question label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .quiz-result {
+            font-size: 18px;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+
+        .quiz-result strong {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-  <!-- ======== Cabeçalho ======== -->
-  <header>
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
 
-  <!-- ======== Início ======== -->
-  <section id="inicio">
-    <h1>Bem-vindo ao meu site 👋</h1>
-    <p>Este é um exemplo de site hospedado gratuitamente no GitHub Pages.</p>
-  </section>
+<header>
+    <img src="download.png" alt="Logo Colégio Educallis">
+    <div class="title">
+        <h1>Impacto Digital na Saúde Mental</h1>
+        <p>Simulador + Quiz Educallis</p>
+    </div>
+</header>
 
-  <!-- ======== Sobre ======== -->
-  <section id="sobre">
-    <h2>Sobre mim</h2>
-    <p>Meu nome é <strong>Leonardo Martins</strong>. Gosto de tecnologia, dados e aprender coisas novas todos os dias.</p>
+<div class="container">
 
+    <!-- Simulador -->
     <div class="card">
-      <h3>💻 Desenvolvimento</h3>
-      <p>Criação de sites simples, painéis e automações usando HTML, SQL e ferramentas online.</p>
+        <h2>Simulador de Tempo Online</h2>
+        <label for="tempo">Tempo de uso diário na internet (em horas):</label>
+        <input type="number" id="tempo" placeholder="Ex: 3" min="0">
+        <button onclick="calcularImpacto()">Calcular Impacto</button>
+        <p class="result" id="impactoResultado">Preencha o tempo de uso para calcular.</p>
     </div>
 
-    <div class="card">
-      <h3>📊 Dados</h3>
-      <p>Trabalho com análise de desempenho, dashboards e relatórios em ferramentas como o Looker Studio.</p>
+    <!-- Quiz -->
+    <div class="card quiz">
+        <h2>Quiz: Como está seu equilíbrio digital?</h2>
+
+        <div id="quiz-container">
+            <div class="question">
+                <p>1. Você costuma olhar o celular logo ao acordar?</p>
+                <label><input type="radio" name="q1" value="2"> Sim, sempre</label>
+                <label><input type="radio" name="q1" value="1"> Às vezes</label>
+                <label><input type="radio" name="q1" value="0"> Raramente</label>
+            </div>
+
+            <div class="question">
+                <p>2. Você sente ansiedade quando fica sem internet?</p>
+                <label><input type="radio" name="q2" value="2"> Sim, muito</label>
+                <label><input type="radio" name="q2" value="1"> Um pouco</label>
+                <label><input type="radio" name="q2" value="0"> Não</label>
+            </div>
+
+            <div class="question">
+                <p>3. Você costuma usar o celular durante as refeições?</p>
+                <label><input type="radio" name="q3" value="2"> Sempre</label>
+                <label><input type="radio" name="q3" value="1"> Às vezes</label>
+                <label><input type="radio" name="q3" value="0"> Nunca</label>
+            </div>
+
+            <div class="question">
+                <p>4. Você usa o celular antes de dormir?</p>
+                <label><input type="radio" name="q4" value="2"> Sim, toda noite</label>
+                <label><input type="radio" name="q4" value="1"> Às vezes</label>
+                <label><input type="radio" name="q4" value="0"> Não</label>
+            </div>
+
+            <div class="question">
+                <p>5. Você já deixou de fazer algo importante por estar online?</p>
+                <label><input type="radio" name="q5" value="2"> Sim</label>
+                <label><input type="radio" name="q5" value="1"> Talvez</label>
+                <label><input type="radio" name="q5" value="0"> Não</label>
+            </div>
+
+            <button onclick="verResultadoQuiz()">Ver Resultado</button>
+            <p class="quiz-result" id="quizResultado"></p>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>📚 Educação</h3>
-      <p>Experiência com acompanhamento de alunos, avaliações e desempenho acadêmico.</p>
-    </div>
-  </section>
+</div>
 
-  <!-- ======== Contato ======== -->
-  <section id="contato">
-    <h2>Entre em contato</h2>
-    <p>Você pode me encontrar em:</p>
-    <p>
-      📧 <a href="mailto:leonardo@email.com">leonardo@email.com</a><br>
-      💼 <a href="https://www.linkedin.com" target="_blank">LinkedIn</a><br>
-      🌍 <a href="https://github.com" target="_blank">GitHub</a>
-    </p>
-  </section>
+<footer>
+    <p>&copy; 2025 Colégio Educallis - Todos os direitos reservados.</p>
+</footer>
 
-  <!-- ======== Rodapé ======== -->
-  <footer>
-    <p>© 2026 Leonardo Martins — Site de teste hospedado no GitHub Pages</p>
-  </footer>
+<div class="marca">EDUCALLIS</div>
+
+<script>
+    function calcularImpacto() {
+        var tempo = parseFloat(document.getElementById('tempo').value);
+        var impacto = "";
+
+        if (isNaN(tempo) || tempo <= 0) {
+            impacto = "Por favor, insira um valor válido de tempo de uso.";
+        } else if (tempo <= 2) {
+            impacto = "Uso equilibrado! Continue assim.";
+        } else if (tempo <= 4) {
+            impacto = "Atenção! O uso pode começar a afetar sua mente.";
+        } else if (tempo <= 6) {
+            impacto = "Tempo excessivo! Pode causar estresse e ansiedade.";
+        } else {
+            impacto = "Sinais de vício digital! Faça pausas e busque equilíbrio.";
+        }
+
+        document.getElementById('impactoResultado').innerText = impacto;
+    }
+
+    function verResultadoQuiz() {
+        var total = 0;
+        for (var i = 1; i <= 5; i++) {
+            var radios = document.getElementsByName("q" + i);
+            for (var r of radios) {
+                if (r.checked) total += parseInt(r.value);
+            }
+        }
+
+        var mensagem = "";
+        if (total <= 3) {
+            mensagem = `
+                <strong>🎉 Excelente equilíbrio digital!</strong>
+                Você tem um ótimo controle sobre o tempo que passa online e sabe equilibrar a tecnologia com momentos offline.
+                Continue praticando o uso consciente e aproveite o mundo real: leia um livro, converse com amigos e faça atividades físicas.
+            `;
+        } else if (total <= 6) {
+            mensagem = `
+                <strong>⚠️ Atenção: equilíbrio em risco!</strong>
+                Você já demonstra certa dependência digital. Às vezes, o uso da tecnologia pode estar tirando seu foco e tranquilidade.
+                Tente criar horários específicos para estar online, faça pausas regulares e evite usar o celular antes de dormir.
+            `;
+        } else {
+            mensagem = `
+                <strong>🚨 Alerta vermelho: alto risco de vício digital!</strong>
+                Seu uso da internet está muito intenso e pode estar afetando seu sono, humor e concentração.
+                Experimente um <em>detox digital</em>: passe um dia sem redes sociais, pratique esportes e converse com pessoas cara a cara.
+                Se o uso estiver afetando sua saúde mental, converse com pais, professores ou profissionais da área.
+            `;
+        }
+
+        document.getElementById("quizResultado").innerHTML = mensagem;
+    }
+</script>
+
 </body>
 </html>
 
